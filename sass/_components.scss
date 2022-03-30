@@ -23,7 +23,7 @@
     background-color: var(--color-grey-light-2);
     padding: 0.7rem 2rem; // VIP for inputs
     border: none;
-    border-radius: 10px;
+    border-radius: 100px;
     margin-right: -3.75rem;
     width: 90%;
     transition: all 0.2s;
@@ -69,20 +69,48 @@
 //// user Navigation
 
 .user-nav {
-  background-color: lightblue;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 2rem;
+  align-self: stretch;
+
+  // do it for all direct children
+  & > * {
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+
+    &:hover {
+      background-color: var(--color-grey-light-2);
+    }
+  }
+
   &__icon-box {
+    position: relative;
   }
 
   &__icon {
     height: 2.25rem;
     width: 2.25rem;
+    fill: var(--color-grey-dark-2); // VIP to change SVG's color
   }
 
   &__notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    font-size: 0.9rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    color: #fff;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
   }
 
   &__user {
@@ -91,6 +119,7 @@
   &__user-photo {
     height: 3.75rem;
     border-radius: 50%;
+    margin-right: 1rem;
   }
 
   &__user-name {
