@@ -188,3 +188,66 @@
   text-align: center;
   padding: 2.5rem;
 }
+
+////////////////////////////////
+//// gallary
+
+.gallary {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}
+
+////////////////////////////////
+//// overview
+
+.overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  font-size: 2.25rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  &__heading {
+  }
+
+  &__stars {
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 0 0 17%;
+    font-size: 1.7rem;
+
+    .btn-inline {
+      color: var(--color-primary);
+      font-size: 1.2rem;
+      border-bottom: 1px solid currentColor;
+      border: none;
+      background-color: var(--color-grey-light-1);
+    }
+  }
+
+  &__rating {
+  }
+
+  &__rating-average {
+  }
+
+  &__rating-count {
+  }
+}
