@@ -342,3 +342,30 @@
     -webkit-mask-size: cover;
   }
 }
+
+////////////////////////////////
+//// list
+
+.recommend {
+  color: var(--color-grey-dark-3);
+  font-size: 1.3rem;
+
+  display: flex;
+  align-items: center;
+
+  &__count {
+    margin-right: auto; //imp trick with flexbox to push __count for the right in smart way
+  }
+
+  &__friend {
+  }
+
+  &__photo {
+    box-sizing: content-box; // to let the border and padding to be out of the img (not in the img limits)
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-right: -1.5rem;
+  }
+}
