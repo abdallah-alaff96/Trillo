@@ -275,10 +275,19 @@
   display: inline-block;
   background-color: transparent;
   cursor: pointer;
-  transition: all 0.2s;
+
+  & span {
+    margin-left: 3px;
+    transition: all 0.2s;
+  }
 
   &:hover {
     color: var(--color-grey-dark-1);
+
+    span {
+      transition: margin-left 0.2s;
+      margin-left: 8px;
+    }
   }
 
   &:focus {
@@ -425,7 +434,7 @@
 }
 
 .review::before {
-  content: "\201C";
+  content: "\201C"; // from "html entities css tricks"
   position: absolute;
   top: -2.75rem;
   left: -1rem;
